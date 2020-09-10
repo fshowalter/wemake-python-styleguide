@@ -59,9 +59,7 @@ class _ValidatedOptions(object):
     min_name_length: int = attr.ib(validator=[_min_max(min=1)])
     i_control_code: bool
     max_name_length: int = attr.ib(validator=[_min_max(min=1)])
-    max_noqa_comments: int = attr.ib(
-        validator=[_min_max(min=1, max=defaults.MAX_NOQA_COMMENTS)],
-    )
+    max_noqa_comments: int = attr.ib(validator=[_min_max(min=1)])
     nested_classes_whitelist: Tuple[str, ...] = attr.ib(converter=tuple)
     allowed_domain_names: Tuple[str, ...] = attr.ib(converter=tuple)
     forbidden_domain_names: Tuple[str, ...] = attr.ib(converter=tuple)
